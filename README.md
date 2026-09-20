@@ -1,25 +1,30 @@
 # ⚡ Spark
 
-> **Module**: `Modules/Spark`  
-> **Ecosystem**: Sakshi (साक्षी // The Witness)  
-> **Role**: Hardware-Accelerated Ephemeral Thought Capture HUD  
-> **Binary**: `~/.local/bin/Spark.exe`  
-> **Global Shortcut**: `Ctrl + Alt + S` (Native Windows Explorer, 0 MB Idle RAM)  
-> **Storage Sink**: `~/.gemini/Spark.md`  
-
 <p align="center">
-  <b>Sub-10ms Native Rust Thought Capture HUD for Windows 11</b><br>
-  <i>Native Rust (LLVM) • Zero Background Daemons • 0 MB Idle RAM • Void Black (#0A0C10) • Smart List Engine</i>
+  <img src="https://img.shields.io/badge/PLATFORM-WINDOWS%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows 11"/>
+  <img src="https://img.shields.io/badge/LANGUAGE-RUST%20(LLVM)-DEA584?style=for-the-badge&logo=rust&logoColor=white" alt="Rust"/>
+  <img src="https://img.shields.io/badge/IDLE%20RAM-0%20MB-brightgreen?style=for-the-badge" alt="0 MB Idle RAM"/>
+  <img src="https://img.shields.io/badge/COLD%20START-%3C10ms-orange?style=for-the-badge" alt="<10ms Cold Start"/>
+  <img src="https://img.shields.io/badge/LICENSE-MIT-blue?style=for-the-badge" alt="MIT License"/>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Language-Rust%201.98+-orange?style=flat-square&logo=rust" alt="Rust" />
-  <img src="https://img.shields.io/badge/Platform-Windows%2011%20%7C%2024H2-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows 11" />
-  <img src="https://img.shields.io/badge/Idle%20RAM-0%20MB-00E5FF?style=flat-square" alt="0 MB Idle RAM" />
-  <img src="https://img.shields.io/badge/Idle%20CPU-0.0%25-00E676?style=flat-square" alt="0.0% CPU" />
-  <img src="https://img.shields.io/badge/Cold%20Start-<10ms-F59E0B?style=flat-square" alt="Cold Start" />
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="MIT License" />
-</p>
+> **Sub-10ms native Rust ephemeral thought capture HUD for Windows 11.**  
+> Native Rust (LLVM) • Zero Background Daemons • 0 MB Idle RAM • Void Black (#0A0C10) • Smart Bullet Engine.
+
+---
+
+## ⚡ 5-Second System Flowcard
+
+```text
+┌────────────────┐      ┌─────────────────────────┐      ┌─────────────────────────┐
+│  Ctrl+Alt+S    │ ──►  │ Native Rust LLVM Engine │ ──►  │ Void Black (#0A0C10)    │
+│  Global Hotkey │      │ Sub-10ms Cold Launch    │      │ Ephemeral Markdown HUD  │
+└────────────────┘      └─────────────────────────┘      └─────────────────────────┘
+                                                                     │
+                                                                     ▼
+                                                         Ctrl+Enter: Append to Spark.md
+                                                         Esc: Cancel & Exit (0 MB RAM)
+```
 
 ---
 
@@ -41,14 +46,14 @@
 
 ## 🌟 Overview & Philosophy
 
-**Spark (साक्षी // Spark)** is a sovereign, zero-friction ephemeral thought capture HUD engineered for Windows 11. It eliminates the cognitive friction of context switching when sudden ideas, strikes, or intuitions arise during deep flow.
+**Spark** is a sovereign, zero-friction ephemeral thought capture HUD engineered for Windows 11. It eliminates the cognitive friction of context switching when sudden ideas, strikes, or intuitions arise during deep flow.
 
 Existing tools fail the "Capture Paradox":
 - **Obsidian**: Superb synthesis engine, but too slow for 2-second fleeting capture.
 - **Windows Sticky Notes**: Bloated UWP app with telemetry and heavy memory footprint.
 - **Notepad / CLI**: Requires window management, file naming, and manual saving.
 
-Spark adheres strictly to Sakshi's **Zero-Daemon Invariant**:
+Spark enforces the **Zero-Daemon Invariant**:
 - **0 MB Idle RAM / 0% CPU**: No persistent background daemon loop or tray icon. Spark exists **strictly while typing**.
 - **Sub-10ms Cold Launch**: Compiled with native Rust LLVM into a standalone single-file binary (~3.1 MB) that hits the screen instantaneously.
 - **Spacious Void HUD Canvas**: Expansive `960x580` viewport, centered on active display, borderless Void Black (`#0A0C10`), dynamic amber border glow.
@@ -65,7 +70,7 @@ Spark adheres strictly to Sakshi's **Zero-Daemon Invariant**:
 | Keybinding | Action | Behavior |
 | :--- | :--- | :--- |
 | **`Ctrl + Alt + S`** | **Summon Spark** | Instant sub-10ms cold launch anywhere across Windows. |
-| **`Ctrl + Enter`** | **Commit & Vanish** | Appends note to `~/.gemini/spark.jsonl`, closes window, 0 MB residue. |
+| **`Ctrl + Enter`** | **Commit & Vanish** | Appends note to `~/.gemini/Spark.md`, closes window, 0 MB residue. |
 | **`Esc`** | **Dismiss / Cancel** | Closes window immediately without saving. |
 | **`Enter`** (on `- text`) | **Smart Bullet** | Automatically inserts `- ` on next line. |
 | **`Enter`** (on `1. text`)| **Smart Number** | Automatically inserts `2. ` on next line. |
@@ -84,17 +89,19 @@ Each capture is appended as a clean, human- and machine-readable Markdown block:
 * Sakshi quarantine rule
 ```
 
-This clean Markdown stream eliminates the ~40-token JSON overhead per entry (an 85% token reduction), renders natively in Obsidian, VS Code, or Notepad, and enables effortless ingestion during session boot scans.
+This clean Markdown stream eliminates JSON overhead, renders natively in Obsidian, VS Code, or Notepad, and enables effortless ingestion during session boot scans.
 
 ---
 
-## 🚀 Installation & Deployment
+## 🚀 30-Second Quickstart
 
 ### 1. Build and Install
 Run the automated installation script from PowerShell:
 
 ```powershell
-.\Modules\Spark\Install-Spark.ps1
+git clone https://github.com/karansinghverma979/Spark.git
+cd Spark
+.\Install-Spark.ps1
 ```
 
 This will:
@@ -107,7 +114,7 @@ This will:
 To cleanly teardown the module:
 
 ```powershell
-.\Modules\Spark\Uninstall-Spark.ps1
+.\Uninstall-Spark.ps1
 ```
 
 ---
@@ -118,3 +125,11 @@ To cleanly teardown the module:
 2. **Standalone Binary**: Zero external runtime dependencies, 100% self-contained native PE binary in `~/.local/bin/Spark.exe`.
 3. **Typography**: Native Nerd Font auto-detection (`JetBrainsMonoNLNerdFont`, `Meslo`, `Cascadia Code`) with smooth fallback.
 4. **Pristine Cleanup**: Intermediate compilation artifacts (`target/`) are excluded from version control.
+
+---
+
+## 🛡️ Security & Governance
+
+- **Vulnerability Disclosures**: Please see our [Security Policy](SECURITY.md) to report vulnerabilities privately.
+- **Contributing**: Please review [PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md) before submitting changes.
+- **License**: Distributed under the [MIT License](LICENSE).
