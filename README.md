@@ -95,7 +95,17 @@ This clean Markdown stream eliminates JSON overhead, renders natively in Obsidia
 
 ## 🚀 30-Second Quickstart
 
-### 1. Build and Install
+### Option A: Standalone Binary (Zero Dependencies)
+Download the pre-compiled native machine binary (no Rust compiler required):
+* 💾 **[Download spark.exe v4.0.0 (2.96 MB)](https://github.com/karansinghverma979/Spark/releases/download/v4.0.0/spark.exe)**
+
+**1-Line PowerShell Auto-Download:**
+```powershell
+New-Item -ItemType Directory -Path "$HOME\.local\bin" -Force | Out-Null
+irm https://github.com/karansinghverma979/Spark/releases/download/v4.0.0/spark.exe -OutFile "$HOME\.local\bin\spark.exe"
+```
+
+### Option B: Build and Install from Source
 Run the automated installation script from PowerShell:
 
 ```powershell
